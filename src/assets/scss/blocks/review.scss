@@ -1,0 +1,192 @@
+.review {
+	padding: 9.9rem 0;
+	background-color: $BG-blue;
+	overflow: hidden;
+
+	position: relative;
+
+	&::before {
+		content: "";
+		width: 727.896px;
+		height: 727.896px;
+
+		border-radius: 727.896px;
+		background: radial-gradient(50% 50% at 50% 50%, rgba(50, 132, 255, 0.5) 0%, rgba(50, 132, 255, 0) 100%);
+
+		position: absolute;
+		top: -50%;
+		left: 0;
+		z-index: 1;
+
+		@include bp($tablet) {
+			top: -30%;
+			left: -30%;
+		}
+	}
+
+	@include bp($tablet) {
+		padding: 10rem 0;
+	}
+	// .review__header
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-bottom: 8rem;
+
+		position: relative;
+		z-index: 2;
+
+		@include bp($tablet) {
+			justify-content: space-between;
+		}
+
+		@include bp($tabletS) {
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+	// .review__title
+	&__title {
+		flex: 1 1 auto;
+		padding-left: 15rem;
+
+		color: $white;
+
+		position: relative;
+		z-index: 2;
+
+		@include bp($tablet) {
+			flex: 0 1 auto;
+			padding: 0;
+		}
+
+		@include bp($tabletS) {
+			margin-bottom: 1rem;
+		}
+	}
+	// .review__control
+	&__control {
+		display: flex;
+		align-items: center;
+		margin-bottom: 3rem;
+
+		@include bp($tablet) {
+			justify-content: center;
+		}
+	}
+	// .review__pagination
+	&__pagination-swiper {
+		margin: 0 1rem;
+
+		color: $white;
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 1.4;
+	}
+	// .review__btn
+	&__btn {
+		cursor: pointer;
+	}
+	// .review__flex
+	&__flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		margin: 0 -1rem;
+
+		@include bp($tablet) {
+			justify-content: center;
+		}
+	}
+	// .review__item
+	&__item {
+		padding: 5.9rem 6.9rem 4.6rem 8.2rem;
+
+		background-color: #2b384f;
+		border-radius: 1rem;
+
+		@include bp($mobile) {
+			padding: 3.5rem 4rem 2.5rem 4.4rem;
+		}
+	}
+
+	&__flex-item {
+		width: 50%;
+		padding: 0 1rem;
+
+		margin-bottom: 2rem;
+
+		@include bp($tablet) {
+			width: 80%;
+		}
+
+		@include bp($tabletS) {
+			width: 100%;
+		}
+	}
+	// .review__text
+	&__text {
+		color: #dbdbdb;
+		font-size: 1.5rem;
+		line-height: 1.4;
+
+		margin-bottom: 2.5rem;
+		position: relative;
+
+		&::before {
+			content: "“";
+
+			font-size: 5rem;
+			line-height: 1.4;
+			font-weight: 700;
+			color: rgba($blue, 0.5);
+
+			position: absolute;
+			top: -1.7rem;
+			left: -4rem;
+			z-index: 1;
+
+			@include bp($mobile) {
+				top: -2.5rem;
+				left: -3rem;
+			}
+		}
+
+		&::after {
+			content: "”";
+
+			font-size: 5rem;
+			font-weight: 700;
+			line-height: 1;
+			color: rgba($blue, 0.5);
+
+			position: absolute;
+			bottom: -5rem;
+			right: 0;
+			z-index: 1;
+
+			@include bp($mobile) {
+				bottom: -4rem;
+				right: 0;
+			}
+		}
+	}
+	// .review__info
+	&__info {
+		color: $gray;
+		line-height: 1.4;
+		font-weight: 500;
+	}
+}
+
+.swiper-button-disabled {
+	opacity: 0.35;
+
+	img {
+		filter: saturate(0.2);
+	}
+}

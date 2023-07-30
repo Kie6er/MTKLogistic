@@ -1,0 +1,219 @@
+.intro {
+	background-color: $BG-blue;
+	padding: 20rem 0 17.1rem;
+	position: relative;
+	overflow: hidden;
+
+	@include bp($pc) {
+		padding: 27.6rem 0 50.7rem;
+	}
+
+	@include bp($tabletS) {
+		padding: 15.5rem 0 31.2rem;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 97.734rem;
+		height: 97.734rem;
+		left: 44%;
+		top: -5%;
+		z-index: 1;
+
+		background: radial-gradient(50% 50% at 50% 50%, #3284ff 0%, rgba(50, 132, 255, 0) 100%);
+
+		@include bp($pc) {
+			width: 888.99px;
+			height: 888.99px;
+			left: 35%;
+			top: 40%;
+		}
+
+		@include bp($tablet) {
+			left: 20%;
+			top: 40%;
+		}
+
+		@include bp($mobile) {
+			top: 50%;
+		}
+
+		@include bp($mobileS) {
+			top: 60%;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 120.6rem;
+		height: 77.1rem;
+		left: 37%;
+		top: 0;
+		z-index: 2;
+
+		background: url(@img/bg-1.webp) center/contain no-repeat;
+
+		@include bp($pc) {
+			left: 10%;
+			top: 45.7rem;
+		}
+
+		@include bp($tablet) {
+			left: 0;
+			top: 40%;
+		}
+
+		@include bp($tabletS) {
+			width: 1000px;
+			left: 0;
+			top: 18rem;
+		}
+
+		@include bp($mobile) {
+			width: 800px;
+			left: -5rem;
+			top: 25rem;
+		}
+
+		@include bp($mobileS) {
+			left: -25rem;
+			top: 27rem;
+		}
+	}
+	// .intro__inner
+	&__inner {
+		position: relative;
+		z-index: 3;
+		width: 60%;
+
+		@include bp($pc) {
+			width: 80%;
+		}
+
+		@include bp($tablet) {
+			width: 100%;
+		}
+	}
+	// .intro__content
+	&__content {
+		margin-bottom: 2rem;
+
+		@include bp($mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+	// .intro__title
+	&__title {
+		font-size: 7rem;
+		font-weight: 800;
+		line-height: 8.5rem;
+		color: #f3f3f3;
+
+		margin-bottom: 4rem;
+
+		@include bp($tabletS) {
+			font-size: 4.2rem;
+			line-height: 1.25;
+			width: 80%;
+		}
+
+		@include bp($mobile) {
+			text-align: center;
+			font-size: 3.5rem;
+			width: 100%;
+
+			margin-bottom: 3rem;
+		}
+
+		@include bp($mobileS) {
+			font-size: 3.2rem;
+		}
+	}
+	// .intro__subtitle
+	&__subtitle {
+		font-size: 1.7rem;
+		line-height: 1.4;
+		color: #dbdbdb;
+		width: 55%;
+
+		span {
+			font-weight: 500;
+		}
+
+		@include bp($tablet) {
+			width: 56%;
+		}
+
+		@include bp($tabletS) {
+			width: 60%;
+			font-size: 1.4rem;
+		}
+
+		@include bp($mobile) {
+			text-align: center;
+			width: 100%;
+		}
+	}
+	// .intro__list
+	&__list {
+		display: flex;
+		margin-bottom: 4rem;
+		color: #e3e3e3;
+		font-size: 1.7rem;
+
+		@include bp($tabletS) {
+			font-size: 1.4rem;
+		}
+
+		@include bp($mobile) {
+			font-size: 1.5rem;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		li {
+			margin-right: 3.5rem;
+
+			@include bp($tabletS) {
+				margin-right: 1.5rem;
+			}
+
+			@include bp($mobile) {
+				margin-bottom: 3rem;
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+
+			&::before {
+				content: "";
+				width: 0.4rem;
+				height: 0.4rem;
+
+				border-radius: 50%;
+				background-color: $white;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 1.5rem;
+			}
+		}
+	}
+
+	&__button {
+		@include bp($mobile) {
+			text-align: center;
+		}
+	}
+
+	&__fast-order {
+		position: absolute;
+		left: 0;
+		bottom: -50px;
+		width: 100%;
+
+		z-index: 5;
+	}
+}

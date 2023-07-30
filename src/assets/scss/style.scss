@@ -1,0 +1,119 @@
+@use "sass:math";
+
+// Подключение переменных ==============================================================================================================
+@import "_vars";
+// Подключение миксинов ==============================================================================================================
+@import "_mixins";
+
+// Подключение шрифтов =================================================================================================================
+//&display=swap - добавить при подключении через плагин
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900");
+// Подключить если есть локальные файлы шрифтов
+// @import "_fonts";
+
+// Подключение иконочных шрифтов ==============================================================================================================
+// Подключить если есть локальные файлы шрифтов
+// @import "fonts/icons";
+
+// Обнуление и общие параметры ==============================================================================================================
+@import "vendor/reset";
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: $text;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	// Скролл заблокирован
+	&.lock {
+		touch-action: none;
+		overflow: hidden;
+	}
+}
+
+.page {
+	overflow: hidden;
+	width: 100%;
+}
+
+p {
+	margin-bottom: 1rem;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.mb0 {
+	margin-bottom: 0;
+}
+
+.link,
+button {
+	font-size: 1.7rem;
+	color: $blue;
+	font-weight: 600;
+	background: none;
+
+	position: relative;
+
+	transition: all .2s linear;
+
+	&::after {
+		content: '';
+		width: 100%;
+		height: 0.1rem;
+		background-color: $blue;
+		
+		position: absolute;
+		bottom: -4px;
+		left: 50%;
+		z-index: 1;
+
+		transition: all .2s linear;
+		transform: translateX(-50%);
+	}
+
+	&:focus {
+		color: rgba($blue, .5);
+
+		&::after {
+			background-color: rgba($blue, .5);
+		}
+	}
+
+	&:hover {
+		color: rgba($blue, .6);
+
+		&::after {
+			width: 0;
+		}
+	}
+}
+
+/* Blocks */
+
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/container";
+@import "blocks/footer";
+@import "blocks/btn";
+@import "blocks/title";
+@import "blocks/fast-order";
+@import "blocks/form";
+@import "blocks/nav";
+@import "blocks/info";
+@import "blocks/burger";
+@import "blocks/intro";
+@import "blocks/text";
+@import "blocks/item";
+@import "blocks/services";
+@import "blocks/park";
+@import "blocks/why-us";
+@import "blocks/calc";
+@import "blocks/work";
+@import "blocks/review";
+@import "blocks/partners";
+

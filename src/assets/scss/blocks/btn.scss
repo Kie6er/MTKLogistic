@@ -1,0 +1,39 @@
+.btn {
+	display: inline-block;
+	background-color: $blue;
+	border-radius: 0.5em;
+
+	font-size: 1.7rem;
+	color: $white;
+	line-height: 1.25;
+	font-weight: 600;
+	text-align: center;
+
+	padding: 1.95rem 3.45rem;
+
+	transition: all 0.2s linear;
+
+	&::after {
+		content: "";
+		display: none;
+	}
+
+	&:focus {
+		text-decoration: underline;
+		background-color: rgba($blue, 0.8);
+		color: $white;
+	}
+
+	&:hover {
+		color: $white;
+		transform: translateY(-0.5rem);
+		background-color: rgba($blue, 0.8);
+	}
+
+	@include bp($mobileS) {
+		width: 100%;
+		font-size: 1.5rem;
+
+		padding: 1.6rem 5.6rem;
+	}
+}

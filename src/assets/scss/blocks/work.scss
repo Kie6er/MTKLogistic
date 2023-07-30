@@ -1,0 +1,146 @@
+.work {
+	padding: 17rem 0 0;
+
+	@include bp($tabletS) {
+		padding: 13.5rem 0 0;
+	}
+	// .work__title
+	&__title {
+		margin-bottom: 13.4rem;
+	}
+	// .work__inner
+	&__inner {
+		width: 95%;
+		margin: 0 auto;
+
+		@include bp($pc) {
+			width: 100%;
+			margin: 0;
+		}
+
+		@include bp($tablet) {
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		@include bp($tabletS) {
+			width: 100%;
+			margin: 0;
+		}
+	}
+	// .work__content
+	&__content {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		margin: 0 -1rem;
+
+		@include bp($tabletS) {
+			justify-content: center;
+		}
+	}
+	// .work__item
+	&__item {
+		display: flex;
+		align-items: center;
+		position: relative;
+		width: 23%;
+
+		padding: 0 1rem;
+		margin-bottom: 23.6rem;
+
+		@include bp($tablet) {
+			width: 33%;
+		}
+
+		@include bp($tabletS) {
+			width: 100%;
+			justify-content: center;
+		}
+
+		@include bp($mobileS) {
+			width: 100%;
+		}
+	}
+	// .work__num
+	&__num {
+		font-size: 18.7rem;
+		line-height: 1.4;
+		font-weight: 700;
+		color: rgba($blue, 0.1);
+
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		z-index: 1;
+
+		transform: translateY(-50%);
+
+		@include bp($tabletS) {
+			left: 40%;
+		}
+	}
+	// .work__icon
+	&__icon {
+		margin-right: 2rem;
+	}
+	// .work__text
+	&__text {
+		font-size: 1.7rem;
+		font-weight: 600;
+		line-height: 1.4;
+		color: $textH2;
+	}
+	// .work__arrow
+	&__arrow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 15%;
+		padding: 0 1rem;
+		margin-bottom: 23.6rem;
+
+		img {
+			object-fit: contain;
+
+			@include bp($tablet) {
+				width: 100%;
+			}
+		}
+
+		&--2 {
+			@include bp($tablet) {
+				display: none;
+			}
+		}
+
+		&--4 {
+			@include bp($tablet) {
+				display: none;
+			}
+		}
+
+		&--3 {
+			display: none;
+
+			@include bp($tablet) {
+				display: block;
+			}
+		}
+
+		@include bp($pc) {
+			width: 10%;
+		}
+
+		@include bp($tablet) {
+			width: 20%;
+		}
+
+		@include bp($tabletS) {
+			display: none;
+		}
+	}
+}

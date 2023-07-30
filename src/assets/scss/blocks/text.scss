@@ -1,0 +1,30 @@
+.text {
+	margin: 11.5rem 0;
+
+	&__content {
+		width: 87.5%;
+		margin: 0 auto;
+
+		color: $text;
+		text-align: center;
+		font-size: 2rem;
+		line-height: 1.4;
+
+		span {
+			font-weight: 500;
+		}
+
+		@include bp($tablet) {
+			font-size: 1.8rem;
+			width: 100%;
+		}
+
+		@include bp($mobile) {
+			font-size: 1.5rem;
+		}
+	}
+
+	@include bp($tablet) {
+		margin: 8rem 0 10rem;
+	}
+}

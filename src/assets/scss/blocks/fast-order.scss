@@ -1,0 +1,64 @@
+.fast-order {
+	@include bp($tabletS) {
+		background-color: #f2f2f2;
+		border-radius: 0.5rem;
+	}
+	// .fast-order__inner
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		background-color: #f2f2f2;
+		border-radius: 0.5rem;
+		padding: 2rem 8rem;
+
+		@include bp($pc) {
+			flex-wrap: wrap;
+			padding: 2.5rem 1.5rem;
+			justify-content: center;
+		}
+
+		@include bp($tabletS) {
+			background: none;
+			padding: 2.5rem 0;
+		}
+
+		@include bp($mobile) {
+			padding: 6rem 0;
+		}
+	}
+	// .fast-order__text
+	&__text {
+		@include bp($pc) {
+			width: 100%;
+			text-align: center;
+
+			margin-bottom: 2.5rem;
+		}
+	}
+	// .fast-order__title
+	&__title {
+		font-size: 1.9rem;
+		font-weight: 600;
+		color: $text;
+
+		margin-bottom: 0.6rem;
+	}
+	// .fast-order__subtitle
+	&__subtitle {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: $gray;
+	}
+
+	&--mt {
+		margin-top: -6.7rem;
+		position: relative;
+		z-index: 6;
+
+		@include bp($tabletS) {
+			margin: 0;
+		}
+	}
+}

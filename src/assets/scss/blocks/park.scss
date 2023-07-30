@@ -1,0 +1,232 @@
+.park {
+	background: $BG-blue;
+	padding: 10.4rem 0 12.8rem;
+
+	position: relative;
+	overflow: hidden;
+
+	@include bp($pc) {
+		padding: 10rem 0;
+	}
+
+	@include bp($tabletS) {
+		padding: 7rem 0 9rem;
+	}
+
+	@include bp($mobile) {
+		padding: 7rem 0 25.6rem;
+	}
+
+	&::after {
+		content: "";
+		background: url(@img/bg-2.webp) center/contain no-repeat;
+
+		width: 316.339px;
+		height: 253.729px;
+
+		position: absolute;
+		bottom: -10%;
+		right: 10%;
+		z-index: 2;
+
+		@include bp($pc) {
+			width: 262.477px;
+			height: 210.526px;
+			top: 15%;
+		}
+
+		@include bp($tablet) {
+			right: 0;
+		}
+
+		@include bp($tabletS) {
+			width: 282.625px;
+			height: 226.687px;
+			top: 78%;
+			right: -10%;
+		}
+
+		@include bp($mobile) {
+			width: 316.339px;
+			height: 253.729px;
+			left: 50%;
+			top: 74%;
+
+			transform: translateX(-40%);
+		}
+
+		@include bp($mobileS) {
+			width: 282.625px;
+			height: 226.687px;
+
+			top: 73%;
+		}
+	}
+
+	&::before {
+		content: "";
+		border-radius: 460.211px;
+		background: radial-gradient(50% 50% at 50% 50%, rgba(50, 132, 255, 0.7) 0%, rgba(50, 132, 255, 0) 100%);
+
+		width: 460.211px;
+		height: 460.211px;
+
+		position: absolute;
+		bottom: -15%;
+		right: 8%;
+		z-index: 1;
+
+		@include bp($pc) {
+			width: 381.851px;
+			height: 381.851px;
+			top: -15%;
+			right: 8%;
+
+			border-radius: 381.851px;
+		}
+
+		@include bp($tablet) {
+			right: -2%;
+		}
+
+		@include bp($tabletS) {
+			top: 65%;
+			right: -10%;
+		}
+
+		@include bp($mobile) {
+			width: 411.163px;
+			height: 411.163px;
+
+			border-radius: 411.163px;
+
+			right: 50%;
+			top: 55%;
+
+			transform: translateX(50%);
+		}
+	}
+	// .park__inner
+	&__inner {
+		margin: 0 auto;
+		color: $white;
+
+		position: relative;
+		z-index: 5;
+
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: stretch;
+
+		width: 64.5%;
+
+		@include bp($pc) {
+			width: 74.5%;
+		}
+
+		@include bp($tablet) {
+			width: 94.5%;
+		}
+
+		@include bp($tabletS) {
+			width: 100%;
+			align-items: center;
+		}
+	}
+	// .park__text
+	&__text {
+		text-align: center;
+		margin-bottom: 8.1rem;
+
+		@include bp($pc) {
+			text-align: left;
+		}
+
+		@include bp($tabletS) {
+			text-align: center;
+			margin-bottom: 5rem;
+		}
+	}
+	// .park__title
+	&__title {
+		margin-bottom: 1rem;
+		color: inherit;
+
+		@include bp($pc) {
+			text-align: left;
+		}
+
+		@include bp($tabletS) {
+			text-align: center;
+		}
+	}
+	// .park__subtitle
+	&__subtitle {
+		color: #8193b2;
+		font-size: 1.7rem;
+		font-weight: 500;
+		line-height: 1.4;
+
+		@include bp($mobileS) {
+			font-size: 1.6rem;
+		}
+	}
+	// .park__content
+	&__content {
+		display: flex;
+		justify-content: space-between;
+
+		margin: 0 -1rem;
+
+		@include bp($tabletS) {
+			flex-wrap: wrap;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+	// .park__list
+	&__list {
+		padding: 0 1rem 0 3.2rem;
+
+		@include bp($tabletS) {
+		}
+
+		li {
+			margin-bottom: 1.6rem;
+			font-size: 2rem;
+			font-weight: 500;
+
+			position: relative;
+
+			&::before {
+				content: "";
+				width: 0.7rem;
+				height: 0.7rem;
+
+				background-color: $blue;
+				border-radius: 50%;
+
+				position: absolute;
+				top: 50%;
+				left: -2.2rem;
+				z-index: 1;
+
+				transform: translateY(-50%);
+			}
+
+			@include bp($pc) {
+				font-size: 1.8rem;
+			}
+
+			@include bp($tabletS) {
+				font-size: 2rem;
+				margin-bottom: 2rem;
+			}
+
+			@include bp($mobileS) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}

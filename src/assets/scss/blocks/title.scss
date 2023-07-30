@@ -1,0 +1,11 @@
+.title {
+	font-size: 3rem;
+	font-weight: 700;
+	color: $textH2;
+	text-align: center;
+
+	@include bp($mobileS) {
+		font-size: 2rem;
+		line-height: 1.4;
+	}
+}
